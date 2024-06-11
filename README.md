@@ -1,7 +1,8 @@
 # Trade bot "Ihorium"
 ![20240611_030426](https://github.com/lZemphix/ihorium-trade-bot/assets/160344440/e82ebe68-d366-4cea-a9e9-b40c4ad86297)
 ![Static Badge](https://img.shields.io/badge/python-3.10.6-blue)
-![Static Badge](https://img.shields.io/badge/pre--Release-v0.1.1--alpha-yellow)
+![GitHub Tag](https://img.shields.io/github/v/tag/lZemphix/ihorium-trade-bot)
+
 
 
 
