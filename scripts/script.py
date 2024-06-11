@@ -1,4 +1,5 @@
 from pybit.unified_trading import HTTP
+from pybit._http_manager import FailedRequestError, InvalidRequestError, JSONDecodeError
 import logging
 from dotenv import load_dotenv
 import os
@@ -23,6 +24,10 @@ def get_balance():
     try:
         balance = client.get_wallet_balance(accountType=accountType)
         return f"{balance['result']['list'][0]['coin'][0]['walletBalance']} {balance['result']['list'][0]['coin'][0]['coin']}"
+    except FailedRequestError as e:
+        if e.status_code == 401:
+            logging.error(e.status_code + e.message)    
+            return 'ErrorCode: 401'
     except Exception as e:
         logging.error(e)
-        return "ErrorCode 401"
+        print(e)
