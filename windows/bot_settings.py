@@ -18,7 +18,7 @@ def bot_settings_window():
             dpg.add_input_text(label="<- API secret key", tag="api_secret_token", password=True, default_value=API_KEY_SECRET)
             dpg.add_combo(label="<- Account type", items=['CONTRACT', 'UNIFIED'], default_value=accountType, tag='account_type') 
             dpg.add_text()   
-            dpg.add_combo(label="<- currency pair", items=['BTC-USDT', 'ETH-USDT'], default_value='BTC-USDT', tag='currency_tag')
-            dpg.add_input_float(label="<- amount (USDT)", tag="ammount_tag", min_value=0, min_clamped=True)
+            dpg.add_combo(label="<- currency pair (only SOL)", items=['SOLUSDT', 'BTHUSDT'], default_value='SOLUSDT', tag='currency_tag')
+            dpg.add_input_double(label="<- amount (USDT)", tag="ammount_tag", min_value=3.5, min_clamped=True)
 
 
